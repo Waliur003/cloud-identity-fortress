@@ -1,0 +1,29 @@
+{
+  "source": ["aws.iam", "aws.signin"],
+  "detail-type": [
+    "AWS API Call via CloudTrail",
+    "AWS Console Sign-In via CloudTrail"
+  ],
+  "$or": [
+    {
+      "detail": {
+        "userIdentity": {
+          "type": ["Root"]
+        }
+      }
+    },
+    {
+      "detail": {
+        "eventName": [
+          "ConsoleLogin",
+          "CreateAccessKey",
+          "CreateUser",
+          "AttachUserPolicy",
+          "PutUserPolicy",
+          "CreatePolicyVersion",
+          "UpdateAccessKey"
+        ]
+      }
+    }
+  ]
+}
