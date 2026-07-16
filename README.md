@@ -44,6 +44,9 @@ Modern enterprise environments depend on strict identity separation, but decentr
 
 ## Architecture Diagram
 
+<img width="1169" height="827" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/ca6f784f-f6c7-46e9-9e7a-4d335e10acf9" />
+
+
 ## Project Procedure
 
 ### Multi-Account Identity Federation Setup
