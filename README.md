@@ -158,17 +158,29 @@ Exports resource attributes like database names and function ARNs to simplify te
 
 This screenshot displays the AWS IAM Identity Center Management Console dashboard. It verifies that the SSO managing instance (ssoins-722335e386f975fd) is enabled in the US East (N. Virginia) region. It shows that the Identity source is set to the default Identity Center directory and mapped to the active organization ID (o-2n5fif32dd), proving that multi-account identity federation is operational.
 
+<img width="1919" height="911" alt="Screenshot 1" src="https://github.com/user-attachments/assets/efc0cfbd-f599-4718-9c73-586d12771cb0" />
+
+
 ### Decoupled EventBridge Target Ingestion Rule
 
 This screenshot captures the Amazon EventBridge rule targets configuration page for the RouteIdentityThreats rule. It shows Target 1 pointing to the IAMGovernanceAnalyzerFunction, using the default execution role Amazon_EventBridge_Invoke_Lambda_1834673376 created specifically for this resource. This confirms that the event-driven trigger pipeline has the correct permissions to initiate serverless executions automatically.
+
+<img width="1919" height="743" alt="Screenshot 2" src="https://github.com/user-attachments/assets/81d7f49e-49b2-467c-98ac-e0cfd33fa499" />
+
 
 ### Real-Time Security Alert Broadcast (SNS Email Notification)
 
 This screenshot displays an email notification with the subject line [HIGH] Identity Fortress Intrusion Warning. Sent by IdFortress (no-reply@sns.amazonaws.com) to the registered auditor inbox, the email details a high-risk event (CreateUser) initiated by the user SunWaliur (arn:aws:iam::418272769771:user/SunWaliur) at 2026-07-16T17:14:59Z. This proves that the automated detection and email alerting pipeline functions immediately upon threat ingestion.
 
+<img width="1633" height="644" alt="Screenshot 3" src="https://github.com/user-attachments/assets/617ad5ea-6256-4ee2-98e0-29a4d8246af2" />
+
+
 ### Stateful Identity Risk Ledger (DynamoDB Inventory)
 
 This screenshot captures the Amazon DynamoDB items inventory page for the IdentityRisksTable. It shows two logged threat items returned from a database scan, indicating that two distinct CreateUser actions initiated by the user SunWaliur were recorded. The table successfully captures the unique FindingId partition keys, Timestamp sort keys, risk classification values, and detailed descriptions, proving that the threat ledger maintains a persistent audit trail.
+
+<img width="1919" height="909" alt="Screenshot 4" src="https://github.com/user-attachments/assets/57d016e3-4a89-4d03-9fc2-f89edf651159" />
+
 
 ## Future Improvements
 
